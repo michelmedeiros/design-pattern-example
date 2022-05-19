@@ -15,7 +15,7 @@ public class CalculadoraImpostoTest {
     void testeCalcularIPI() {
         CalculadoraImposto calculadora = new CalculadoraImposto();
         BigDecimal valor = BigDecimal.valueOf(100l);
-        Orcamento orcamento = new Orcamento(valor);
+        Orcamento orcamento = new Orcamento(valor, 1);
         BigDecimal impostoCalculado = calculadora.calcularImposto(orcamento, TipoImposto.IPI);
         Assertions.assertThat(impostoCalculado).isEqualTo(BigDecimal.valueOf(10.0));
     }
@@ -24,7 +24,7 @@ public class CalculadoraImpostoTest {
     void testeCalcularStrategyICMS() {
         CalculadoraImposto calculadora = new CalculadoraImposto();
         BigDecimal valor = BigDecimal.valueOf(100l);
-        Orcamento orcamento = new Orcamento(valor);
+        Orcamento orcamento = new Orcamento(valor, 1);
         BigDecimal impostoCalculado = calculadora.calcularImpostoStrategy(orcamento, new CalculadoraCalculoICMS());
         Assertions.assertThat(impostoCalculado).isEqualTo(BigDecimal.valueOf(20.0));
     }
@@ -33,7 +33,7 @@ public class CalculadoraImpostoTest {
     void testeCalcularStrategyIPI() {
         CalculadoraImposto calculadora = new CalculadoraImposto();
         BigDecimal valor = BigDecimal.valueOf(100l);
-        Orcamento orcamento = new Orcamento(valor);
+        Orcamento orcamento = new Orcamento(valor, 1);
         BigDecimal impostoCalculado = calculadora.calcularImpostoStrategy(orcamento, new CalculadoraCalculoIPI());
         Assertions.assertThat(impostoCalculado).isEqualTo(BigDecimal.valueOf(10.0));
     }
@@ -42,7 +42,7 @@ public class CalculadoraImpostoTest {
     void testeCalcularICMS() {
         CalculadoraImposto calculadora = new CalculadoraImposto();
         BigDecimal valor = BigDecimal.valueOf(100l);
-        Orcamento orcamento = new Orcamento(valor);
+        Orcamento orcamento = new Orcamento(valor, 1);
         BigDecimal impostoCalculado = calculadora.calcularImposto(orcamento, TipoImposto.ICMS);
         Assertions.assertThat(impostoCalculado).isEqualTo(BigDecimal.valueOf(20.0));
     }

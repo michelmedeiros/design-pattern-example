@@ -9,4 +9,5 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class Orcamento {
     private BigDecimal valor;
+    private int quantidadeItems;
 }
