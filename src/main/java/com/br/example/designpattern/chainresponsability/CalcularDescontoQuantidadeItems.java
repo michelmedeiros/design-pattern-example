@@ -11,10 +11,12 @@ public class CalcularDescontoQuantidadeItems extends DescontoChainResponsability
     }
 
     @Override
-    public BigDecimal calcular(Orcamento orcamento) {
-        if(orcamento.getQuantidadeItems() >=5) {
-            return orcamento.getValor().multiply(BigDecimal.valueOf(0.1));
-        }
-        return proximoDesconto.calcular(orcamento);
+    public BigDecimal efetuarCalculo(Orcamento orcamento) {
+        return orcamento.getValor().multiply(BigDecimal.valueOf(0.1));
+    }
+
+    @Override
+    protected boolean deveCalcular(Orcamento orcamento) {
+        return orcamento.getQuantidadeItems() >=5;
     }
 }

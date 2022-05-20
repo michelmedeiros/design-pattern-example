@@ -5,7 +5,6 @@ import com.br.example.designpattern.chainresponsability.CalcularDescontoQuantida
 import com.br.example.designpattern.chainresponsability.DescontoChainResponsability;
 import com.br.example.designpattern.chainresponsability.SemDesconto;
 import com.br.example.designpattern.model.Orcamento;
-import com.br.example.designpattern.model.TipoImposto;
 
 import java.math.BigDecimal;
 

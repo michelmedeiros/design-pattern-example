@@ -11,7 +11,12 @@ public class SemDesconto extends DescontoChainResponsability {
     }
 
     @Override
-    public BigDecimal calcular(Orcamento orcamento) {
+    public BigDecimal efetuarCalculo(Orcamento orcamento) {
         return BigDecimal.ZERO;
+    }
+
+    @Override
+    protected boolean deveCalcular(Orcamento orcamento) {
+        return true;
     }
 }

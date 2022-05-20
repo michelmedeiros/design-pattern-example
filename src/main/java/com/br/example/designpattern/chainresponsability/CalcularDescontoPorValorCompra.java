@@ -10,10 +10,12 @@ public class CalcularDescontoPorValorCompra extends DescontoChainResponsability 
         super(desconto);
     }
     @Override
-    public BigDecimal calcular(Orcamento orcamento) {
-        if(orcamento.getValor().compareTo(BigDecimal.valueOf(500.0)) > 0) {
-            return orcamento.getValor().multiply(BigDecimal.valueOf(0.1));
-        }
-        return proximoDesconto.calcular(orcamento);
+    public BigDecimal efetuarCalculo(Orcamento orcamento) {
+        return orcamento.getValor().multiply(BigDecimal.valueOf(0.1));
+    }
+
+    @Override
+    protected boolean deveCalcular(Orcamento orcamento) {
+        return orcamento.getValor().compareTo(BigDecimal.valueOf(500.0)) > 0;
     }
 }
