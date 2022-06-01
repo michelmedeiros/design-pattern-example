@@ -1,8 +1,6 @@
-package com.br.example.designpattern.situacao;
+package com.br.example.designpattern.state;
 
 import com.br.example.designpattern.model.Orcamento;
-
-import java.math.BigDecimal;
 
 public class Reprovado extends SituacaoOrcamento {
 

@@ -1,6 +1,6 @@
 package com.br.example.designpattern.model;
 
-import com.br.example.designpattern.situacao.SituacaoOrcamento;
+import com.br.example.designpattern.state.SituacaoOrcamento;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
