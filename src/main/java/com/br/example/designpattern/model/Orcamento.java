@@ -9,9 +9,14 @@ import java.math.BigDecimal;
 @Data
 @AllArgsConstructor
 public class Orcamento {
-    private BigDecimal valor;
-    private int quantidadeItems;
+    public BigDecimal valor;
+    public int quantidadeItems;
     private SituacaoOrcamento situacaoOrcamento;
+
+    public Orcamento(BigDecimal valorOrcamento, int quantidadeItens) {
+        this.valor = valorOrcamento;
+        this.quantidadeItems = quantidadeItens;
+    }
 
     public void aplicarDescontoExtra() {
         BigDecimal desconto = this.situacaoOrcamento.calcularDescontoExtra(this);
